@@ -15,21 +15,20 @@ public class UserLoginController {
 	@Autowired
 	UserLoginService uService;
 	
-	@PostMapping("/register")
-	public UserLogin registerUser(@RequestBody UserLogin user) throws Exception
+	@PostMapping("/userRegister")
+	public UserLogin registerUser(@RequestBody UserLogin user) throws Exception 
 	{
-		String tempEmail=user.getEmailId();
-		if(tempEmail !=null && !"".equals(tempEmail)) 
-		{
-			UserLogin u=uService.findByEmailId(tempEmail);
-			if(u!=null)
-				throw new Exception("User exists with this email id"+tempEmail);
-		}
-		
-		
 		return uService.saveUser(user);
 	}
 	
 	
+	@PostMapping("/userLogin")
+	public UserLogin loginUser(@RequestBody UserLogin user) throws Exception
+	{
+		return uService.loginUser(user);
+	}
+	
+	
+
 
 }

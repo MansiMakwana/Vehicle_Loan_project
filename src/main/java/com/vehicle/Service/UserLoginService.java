@@ -4,8 +4,10 @@ import com.vehicle.pojo.UserLogin;
 
 public interface UserLoginService {
 
-	UserLogin findByEmailId(String tempEmail);
 
-	UserLogin saveUser(UserLogin user);
+
+	UserLogin saveUser(UserLogin user) throws Exception;
+
+	UserLogin loginUser(UserLogin user) throws Exception;
 
 }

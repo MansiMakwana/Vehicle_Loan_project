@@ -10,4 +10,6 @@ public interface UserLoginRepo extends JpaRepository<UserLogin, Integer>{
 
 	UserLogin findByEmailId(String tempEmail);
 
+	UserLogin findByEmailIdAndPassword(String tempEmail, String tempPassword);
+
 }
