@@ -17,11 +17,11 @@ public class UserLoginServiceImpl implements UserLoginService{
 	@Override
 	public UserLogin saveUser(UserLogin user) throws Exception {
 
-	String tempEmail=user.getEmailId();
+	String tempEmail=user.getUserEmailId();
 		
 		if(tempEmail !=null && !"".equals(tempEmail)) 
 		{
-			UserLogin u=uRepo.findByEmailId(tempEmail);
+			UserLogin u=uRepo.findByUserEmailId(tempEmail);
 			if(u!=null)
 				throw new Exception("User exists with this email id "+tempEmail);
 		}
@@ -35,12 +35,12 @@ public class UserLoginServiceImpl implements UserLoginService{
 
 	@Override
 	public UserLogin loginUser(UserLogin user) throws Exception {
-		String tempEmail=user.getEmailId();
-		String tempPassword=user.getPassword();
+		String tempEmail=user.getUserAddress();
+		String tempPassword=user.getUserPassword();
 		UserLogin u=null;
 		if(tempEmail!=null && tempPassword!=null)
 		{
-			 u=uRepo.findByEmailIdAndPassword(tempEmail,tempPassword);
+			 u=uRepo.findByUserEmailIdAndUserPassword(tempEmail,tempPassword);
 			if(u==null)
 				throw new Exception("Invalid EmailId or password");
 				

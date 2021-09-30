@@ -8,8 +8,8 @@ import com.vehicle.pojo.UserLogin;
 @Repository
 public interface UserLoginRepo extends JpaRepository<UserLogin, Integer>{
 
-	UserLogin findByEmailId(String tempEmail);
+	UserLogin findByUserEmailId(String tempEmail);
 
-	UserLogin findByEmailIdAndPassword(String tempEmail, String tempPassword);
+	UserLogin findByUserEmailIdAndUserPassword(String tempEmail, String tempPassword);
 
 }
