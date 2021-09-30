@@ -1,20 +1,28 @@
 package com.vehicle.pojo;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 
 @Entity
-@Table(name = "AdminLoginDetails")
+@Table(name = "Admin_Login_Details")
 public class AdminLogin {
 	
 	@Id
+	@Column(name="ADMIN_ID")
 	private int id;
+	
+	@Column(name="ADMIN_EMAIL_ID")
 	private String emailId;
+	
+	@Column(name="ADMIN_PASSWORD")
 	private String password;
 
 
+	
+	
 	
 	
 	public AdminLogin(int id, String emailId, String password) {

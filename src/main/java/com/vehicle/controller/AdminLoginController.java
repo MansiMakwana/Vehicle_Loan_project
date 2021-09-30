@@ -4,6 +4,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -12,6 +13,7 @@ import com.vehicle.Service.AdminLoginService;
 import com.vehicle.pojo.AdminLogin;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:4200")
 public class AdminLoginController
 {
 	@Autowired
@@ -26,6 +28,7 @@ public class AdminLoginController
 	
 	
 	@PostMapping("/adminLogin")
+
 	public AdminLogin loginAdmin(@RequestBody AdminLogin admin) throws Exception
 	{
 		return aService.loginAdmin(admin);
