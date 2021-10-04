@@ -82,10 +82,13 @@
     text-transform:capitalize;
     transition:.2s ease-in-out;
     filter:brightness(1);
+    
   }
   .login {
-    background:#ec1c1c;
+    
+    background:#d12121;
   }
+
   .create{
     width:100%;
     font-weight:normal;

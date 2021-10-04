@@ -1,39 +1,41 @@
 <div *ngIf="!isELigible" class="error-msg">
         
-    <h1 style="color: red; text-align: center;">Not eligible</h1> 
+    <h1 style="color: rgb(83, 0, 0); text-align: center; font-weight: bolder;">Not eligible</h1> 
  </div>
 <div class="container">
+    <div class="login-form"> 
+        <h1 class="title">Bank Account Details</h1>
 <form #UserAccountDetailsForm="ngForm" (ngSubmit)="useraccdetails(UserAccountDetailsForm)" class="form">
-    <br>
-    <h2>Bank Account Details</h2><br>
-    <div class="form-group">
-        <label>Account Number</label>
-        <input type="text" class="form-control" name="accNo" ngModel required>
+    
+    
+    <div class="input-field">
+        <label></label>
+        <input type="text" placeholder="Account Number" class="form-control" name="accNo" ngModel required>
     </div>
-    <div class="form-group">
-        <label>Bank Name</label>
-        <input type="text" class="form-control" name="bankName" ngModel required>
+    <div class="input-field">
+        <label></label>
+        <input type="text" placeholder="Bank Name" class="form-control" name="bankName" ngModel required>
     </div>
-    <div class="form-group">
-        <label>IFSC Code</label>
-        <input type="text" class="form-control" name="accIFSC" ngModel required>
+    <div class="input-field">
+        <label></label>
+        <input type="text" placeholder="IFSC Code" class="form-control" name="accIFSC" ngModel required>
     </div>
-    <div class="form-group">
-        <label>Account Type</label>
-        <input type="text" class="form-control" name="accType" ngModel required>
+    <div class="input-field">
+        <label></label>
+        <input type="text" placeholder="Account Type" class="form-control" name="accType" ngModel required>
     </div>
-    <div class="form-group">
-        <label>Employement Type</label>
-        <input type="text" class="form-control" name="userEmpType" ngModel required>
+    <div class="input-field">
+        <label></label>
+        <input type="text" placeholder="Employement Type" class="form-control" name="userEmpType" ngModel required>
     </div>
-    <div class="form-group">
-        <label>Salary Per Month</label>
-        <input type="text" class="form-control" name="monthlySalary" ngModel required>
+    <div class="input-field" >
+        <label></label>
+        <input type="text" placeholder="Salary Per Month" class="form-control" name="monthlySalary" ngModel required>
     </div>
 
 <br>
-    <div  >
-        <label for="existingEMI">Do You Have Any Exsiting EMI?</label> <br>
+    <div class="radiobtn">
+        <label for="existingEMI">Do You Have Any Exsiting EMI?</label> &nbsp;&nbsp;
         <input  type="radio" value="true" name="existingEMI" ngModel>True
         <input type="radio" value="false" name="existingEMI" ngModel> False 
       
@@ -46,4 +48,4 @@
      </div>
 
 </form>
-</div>
+</div></div>

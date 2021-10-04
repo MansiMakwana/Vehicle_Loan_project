@@ -1,36 +1,40 @@
 <div class="container">
-    <h2 >Loan Details</h2>
+  <div class="login-form">
+    <h1 class="title">Loan Details</h1>
+    
   <form #loanDetailsForm="ngForm" (ngSubmit)="applyForLoan(loanDetailsForm)">
-      <div class="form-group">
-        <label for="loanAmount">Loan Amount:</label>
-        <input [disabled]="dis" type="number" class="form-control" name="loanAmount" ngModel required>
+      <div class="input-field">
+        <label for="loanAmount"></label>
+        <input [disabled]="dis" placeholder="Loan Amount" type="number" class="form-control" name="loanAmount" ngModel required>
       </div>
-      <div class="form-group">
-        <label for="interestRate">Interest Rate:</label>
-        <input [disabled]="disable" type="number" class="form-control" name="interestRate" placeholder="5%" ngModel required>
+      <div class="input-field">
+        <label for="interestRate"></label>
+        <input [disabled]="disable"  type="number" class="form-control" name="interestRate" placeholder="Interest Rate: 5%" ngModel required>
       </div>
 
-      <div class="form-group">
-        <label for="tenure">Loan Tenure:</label>
-        <input [disabled]="dis" type="number" class="form-control" name="tenure" placeholder="In Months"  ngModel required>
+      <div class="input-field">
+        <label for="tenure"></label>
+        <input [disabled]="dis" placeholder="Loan Tenure" type="number" class="form-control" name="tenure" placeholder="In Months"  ngModel required>
       </div>
       <br>
-      <button type="submit" [disabled]="!loanDetailsForm.valid" class="btn btn-info">Calculate EMI</button>
+      <button type="submit" [disabled]="!loanDetailsForm.valid" class="btn login">Calculate EMI</button>
   
     </form>
-  </div>
+
+      
 
 
+<ng-container *ngIf="flag;">
+ <h2 style="font-weight: bold; color: black;"> EMI: {{loan.emi}}</h2>
+
+
+  <button (click)="gotoFormPage1()" class="btn login">Apply Now</button>
   
-<br><br>
-
-  <ng-container *ngIf="flag;">
-    EMI: {{loan.emi}}
-
-
-    <button (click)="gotoFormPage1()" >Apply Now</button>
-    
 </ng-container>
+  </div>
+</div>
+
+
 
 
 

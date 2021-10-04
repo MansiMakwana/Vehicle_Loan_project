@@ -1,31 +1,25 @@
-<p>pending-loans works!</p>
-
-
-<table>
+<div class="container">
+  <h1 style="font-weight: bold; text-align: center;" >PENDING USER LOANS</h1>
+  <table class="table table-light table-bordered table-hover ">
     <thead>
-        <th>User ID</th>
-        <th>Loan ID</th>
-        <th>Details</th> 
-        <th>Status</th>
-        <th>Change Status</th>
+      <tr>
+        <th scope="col">User ID</th>
+        <th scope="col">Loan ID</th>
+        <th scope="col">Details</th> 
+        <th scope="col">Status</th>
+        <th scope="col">Change Status</th>
+      </tr>
     </thead>  
 
     <tbody>
         <tr *ngFor="let l of PendingLoanArray">
-                <td>{{l.userLogin.userId}}</td>
+                <td scope="row">{{l.userLogin.userId}}</td>
                 <td>{{l.loanId}} </td>
-                <td><button (click)="gotoViewDetails(l.userLogin.userId)" >View Details</button></td>
+                <td><button (click)="gotoViewDetails(l.userLogin.userId)"  class="btn btn-outline-secondary" >View Details</button></td>
                 <td>{{ l.applicationStatus}}</td>
-                <td><button (click)="aprooveLoan(l.userLogin.userId)">Approve</button> 
-                  <button (click)="RejectLoan(l.userLogin.userId)">Reject</button>
-  
+                <td><button (click)="aprooveLoan(l.userLogin.userId)" class="btn btn-outline-success">Approve</button>&nbsp; 
+                  <button (click)="RejectLoan(l.userLogin.userId)" class="btn btn-outline-danger">Reject</button>  
                </td>
-             <!-- <td><button (click)="gotoViewDetails(l.userLogin.userId)" [(ngModel)]="l.userLogin.userId">View Details</button></td>
-              
-              
--->
-
-
         </tr>
 </tbody>
-</table>
+</table></div>

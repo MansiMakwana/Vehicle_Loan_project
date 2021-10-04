@@ -1,29 +1,21 @@
-
-<div class="container py-5">
-    <div class="row">
-        <div class="col-lg-7 mx-auto bg-white rounded shadow">
-            <div class="table-responsive">
-
-<table class="table table-fixed">
+<div class="container">
+<h1 style="font-weight: bold; text-align: center;" >APROOVED USER LOANS</h1>
+<table class="table table-bordered table-hover table-light ">
     <thead>
         <tr>
-        <th scope="col" class="col-3">User ID</th>
-        <th  scope="col" class="col-3">Loan ID</th>
-        <th  scope="col" class="col-3">Details</th> 
-        <th  scope="col" class="col-3">Status</th>
+        <th scope="col" >User ID</th>
+        <th  scope="col" >Loan ID</th>
+        <th  scope="col" >Details</th> 
+        <th  scope="col" >Status</th>
         </tr>
     </thead>  
 
     <tbody>
         <tr *ngFor="let l of AproovedLoanArray" >
-                <td class="col-3">{{l.userLogin.userId}}</td>
-                <td class="col-3">{{l.loanId}} </td>
-                <td class="col-3"><button (click)="gotoViewDetails(l.userLogin.userId)"> View Details</button></td>
-                <td class="col-3">{{ l.applicationStatus}}</td>  
+                <td scope="row" >{{l.userLogin.userId}}</td>
+                <td >{{l.loanId}} </td>
+                <td ><button (click)="gotoViewDetails(l.userLogin.userId)" class="btn btn-outline-secondary"> View Details</button></td>
+                <td >{{ l.applicationStatus}}</td>  
         </tr>
 </tbody>
-</table>
-</div>
-</div>
-</div>
-</div>
+</table></div>

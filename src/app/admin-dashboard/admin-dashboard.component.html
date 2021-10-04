@@ -1,27 +1,22 @@
-<br>
-<br>
-<h1 style="text-align: center;">ADMIN DASHBOARD</h1>
+<div class="container"><br><br>
+<h1 style="font-weight: bold; text-align: center;">ADMIN DASHBOARD</h1>
 
-<div style="margin-left: 40%;">
-
-<br><br>
-
-
-<button (click)="getApprovedLoans()">Clients</button>
-it will have all the approved applications 
-
-<br><br>
-
-<button (click)="getPendingLoans()" >Application</button>
-it will have all the user applications
-
-<br><br>
-
-<button (click)="getRejectedLoans()">Rejected List</button>
-it will have all the rejected applications
 
 
 <br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-<button (click)="gotoHome()">Logout</button>
+<button (click)="getApprovedLoans()" class="btn">Clients</button>
+&nbsp;&nbsp;&nbsp;
+
+<button (click)="getPendingLoans()" class="btn">Application</button>
+&nbsp;&nbsp;&nbsp;
+
+<button (click)="getRejectedLoans()" class="btn">Rejected List</button>
+
+
+
+<br><br><br><br>
+
+<button (click)="gotoHome()" class="logout">Logout</button>
 </div>

@@ -1,22 +1,21 @@
 <div class="container">
-    <h2 >User Login</h2>
-   
+  <div class="login-form">
+    <h1 class="title">User Login</h1>
     <form #userLoginForm="ngForm" (ngSubmit)="loginuser(userLoginForm)">
       
-        <div class="form-group">
-          <label for="userEmailId">Email address:</label>
-          <input type="email" class="form-control" name="userEmailId" ngModel required>
+        <div class="input-field">
+          <label for="userEmailId"></label>
+          <input type="email" placeholder="Email address" class="form-control" name="userEmailId" ngModel required>
         </div>
-        <div class="form-group">
-          <label for="userPassword">Password:</label>
-          <input type="password" class="form-control" name="userPassword"  ngModel required>
+        <div class="input-field">
+          <label for="userPassword"></label>
+          <input type="password" placeholder="Password" class="form-control" name="userPassword"  ngModel required>
         </div>
-        <div class="checkbox">
-          <label><input type="checkbox"> Remember me</label>
-        </div>
-        <button type="submit" [disabled]="!userLoginForm.valid" class="btn btn-info">Login</button>
+        <br>
+        <button [disabled]="!userLoginForm.valid" class="btn login">Login user</button>
         
       </form>
-
-      <br><br> New User?     <br>       <button (click)="gotoRegisterUser()" class="btn btn-info">Register</button>
+<br>
+        <p style="color: black; font-size: medium;"> New User?</p>        <button (click)="gotoRegisterUser()" class="btn login">Register</button>
     </div>
+  </div>
