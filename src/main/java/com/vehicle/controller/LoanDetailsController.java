@@ -34,4 +34,8 @@ public class LoanDetailsController {
 	{
 		return lService.updateLoanDetails(loan);
 	}
+	
+	
+
+	
 }

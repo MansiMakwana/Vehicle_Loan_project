@@ -2,6 +2,8 @@ package com.vehicle.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -30,6 +32,13 @@ public class UserLoginController {
 	public UserLogin loginUser(@RequestBody UserLogin user) throws Exception
 	{
 		return uService.loginUser(user);
+	}
+	
+	
+	@GetMapping("/getUserById/{userId}")
+	public UserLogin getUserById(@PathVariable("userId") int userId)
+	{
+		return uService.getUserById(userId);
 	}
 	
 	

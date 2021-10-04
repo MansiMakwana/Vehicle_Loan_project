@@ -1,5 +1,8 @@
 package com.vehicle.Service;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -52,7 +55,11 @@ public class LoanDetailsServiceImpl implements LoanDetailsService{
 		
 		
 	//	float EMI = ;
-		
+//		String date=new java.util.Date(); 
+//		
+//		DateFormat inputFormatter = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss.SSS");
+//		Date date_ = inputFormatter.parse(date);
+//		loan.setLoanStartDate(date);
 		loan.setEmi((float)Math.ceil(calculate(P,R,n)));
 		
 		UserLogin tempUser=uLRepo.findByUserId(userId);
@@ -77,6 +84,8 @@ public class LoanDetailsServiceImpl implements LoanDetailsService{
 		float n=loan.getTenure();
 		long tempID=loan.getLoanId();
 		Loan l=lRepo.findByLoanId(tempID);
+		
+		//l.setLoanStartDate(java.time.LocalDate.now()); 
 		
 		l.setEmi((float)Math.ceil(calculate(P,R,n)));
 		l.setInterestRate(R);

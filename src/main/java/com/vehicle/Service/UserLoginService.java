@@ -10,4 +10,6 @@ public interface UserLoginService {
 
 	UserLogin loginUser(UserLogin user) throws Exception;
 
+	UserLogin getUserById(int userId);
+
 }

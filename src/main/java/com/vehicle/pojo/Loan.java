@@ -31,7 +31,7 @@ public class Loan
 	private float emi;
 
 	@Column(name="INTEREST_RATE")
-	private float interestRate;
+	private float interestRate =5;
 
 	@Column(name="LOAN_AMOUNT")
 	private float loanAmount;
@@ -54,7 +54,7 @@ public class Loan
 	private float tenure;
 
 	@Column(name="LOAN_TYPE", length=30)
-	private String loantype;
+	private String loantype="Vehicle Loan";
 
 
 

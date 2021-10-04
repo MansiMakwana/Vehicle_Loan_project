@@ -35,7 +35,7 @@ public class UserLoginServiceImpl implements UserLoginService{
 
 	@Override
 	public UserLogin loginUser(UserLogin user) throws Exception {
-		String tempEmail=user.getUserAddress();
+		String tempEmail=user.getUserEmailId();
 		String tempPassword=user.getUserPassword();
 		UserLogin u=null;
 		if(tempEmail!=null && tempPassword!=null)
@@ -46,6 +46,14 @@ public class UserLoginServiceImpl implements UserLoginService{
 				
 		}
 		
-		return user;
+		return uRepo.save(u);
+	}
+
+
+
+	@Override
+	public UserLogin getUserById(int userId) {
+		// TODO Auto-generated method stub
+		return uRepo.findByUserId(userId);
 	}
 }

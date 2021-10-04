@@ -34,4 +34,11 @@ public class UserAccDetailsServiceImpl implements UserAccDetailsService {
 	}
 
 
+	@Override
+	public UserAccDetails getAccDetailsById(int userId) {
+		
+		return uRepo.findByCurrentUserLogin(userId);
+	}
+
+
 }

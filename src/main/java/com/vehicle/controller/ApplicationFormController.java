@@ -31,7 +31,7 @@ public class ApplicationFormController {
 	
 	//fetch Application using userID
 	@GetMapping("/fetchApplicationById/{userId}")
-	public Loan fetchAppById(@PathVariable("userId") int userId)
+	public Loan fetchAppById(@PathVariable("userId") int userId) 
 	{
 		return aService.fetchAppById(userId);
 	}
