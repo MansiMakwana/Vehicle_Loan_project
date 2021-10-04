@@ -8,7 +8,13 @@ import { UserAccDetails } from './user-acc-details';
 export class UseraccdetailsService {
   uID:number=JSON.parse(sessionStorage.getItem('token')  || '{}');
   constructor(private http : HttpClient) { }
+
   public getAll(accNo:any)  {
     return this.http.post("http://localhost:8089/userAccDetails/"+this.uID, accNo);
+  }
+
+  public getAccDetailsById()
+  {
+    return this.http.get("localhost:8089/getAccDetailsById/"+this.uID);
   }
 }

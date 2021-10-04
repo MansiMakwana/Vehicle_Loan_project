@@ -18,6 +18,7 @@ export class ViewDetailsComponent implements OnInit {
     this.service.getApplicantByIdRemote(this.user_Id).subscribe(
       (data)=> 
       {
+        
         this.loan=data;
       },
       (error)=>

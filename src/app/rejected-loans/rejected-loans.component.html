@@ -12,7 +12,7 @@
         <tr *ngFor="let l of RejectedLoanArray">
                 <td>{{l.userLogin.userId}}</td>
                 <td>{{l.loanId}} </td>
-              <td><button (click)="gotoViewDetails(l.userLogin.userId)" [(ngModel)]="l.userLogin.userId"> View Details</button></td>
+              <td><button (click)="gotoViewDetails(l.userLogin.userId)"> View Details</button></td>
               <td>{{ l.applicationStatus}}</td>
                
         </tr>

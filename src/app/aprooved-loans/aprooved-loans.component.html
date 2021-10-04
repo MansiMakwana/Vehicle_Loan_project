@@ -1,21 +1,29 @@
-<p>aprooved-loans works!</p>
 
+<div class="container py-5">
+    <div class="row">
+        <div class="col-lg-7 mx-auto bg-white rounded shadow">
+            <div class="table-responsive">
 
-<table>
+<table class="table table-fixed">
     <thead>
-        <th>User ID</th>
-        <th>Loan ID</th>
-        <th>Details</th> 
-        <th>Status</th>
+        <tr>
+        <th scope="col" class="col-3">User ID</th>
+        <th  scope="col" class="col-3">Loan ID</th>
+        <th  scope="col" class="col-3">Details</th> 
+        <th  scope="col" class="col-3">Status</th>
+        </tr>
     </thead>  
 
     <tbody>
-        <tr *ngFor="let l of AproovedLoanArray">
-                <td>{{l.userLogin.userId}}</td>
-                <td>{{l.loanId}} </td>
-              <td><button (click)="gotoViewDetails(l.userLogin.userId)" [(ngModel)]="l.userLogin.userId"> View Details</button></td>
-              <td>{{ l.applicationStatus}}</td>
-               
+        <tr *ngFor="let l of AproovedLoanArray" >
+                <td class="col-3">{{l.userLogin.userId}}</td>
+                <td class="col-3">{{l.loanId}} </td>
+                <td class="col-3"><button (click)="gotoViewDetails(l.userLogin.userId)"> View Details</button></td>
+                <td class="col-3">{{ l.applicationStatus}}</td>  
         </tr>
 </tbody>
 </table>
+</div>
+</div>
+</div>
+</div>

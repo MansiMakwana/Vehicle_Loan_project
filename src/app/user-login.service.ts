@@ -8,7 +8,8 @@ export class UserLoginService {
 
   constructor(private http:HttpClient) { }
 
-  baseUrl="http://localhost:8089/"
+  baseUrl="http://localhost:8089/";
+  uID:number=JSON.parse(sessionStorage.getItem('token')  || '{}');
 
   public loginUserFromRemote(user:Userlogin)
   {
@@ -19,6 +20,11 @@ export class UserLoginService {
   public registerUserFromLogin(user:Userlogin)
   {
     return this.http.post(this.baseUrl+"userRegister",user);
+  }
+
+  public getUserById()
+  {
+    return this.http.get(this.baseUrl+"getUserById/"+this.uID);
   }
 
 }

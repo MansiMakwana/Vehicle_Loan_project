@@ -41,17 +41,17 @@ export class AdminControlsService {
 
   public getApplicantByIdRemote(user_id:any)
   {
-    return this.http.get(this.baseUrl+"fetchApplicationById/"+ user_id);
+    return this.http.get(this.baseUrl+"fetchApplicationById/"+user_id);
   }
 
 
-  public aprooveLoanRemote(user_id:any)
+  public aprooveLoanRemote()
   {
-    return this.http.get(this.baseUrl+"approveLoan/"+ user_id);
+    return this.http.get(this.baseUrl+"approveLoan/"+this.shared_user_id);
   }
 
-  public RejectLoanRemote(user_id:any)
+  public RejectLoanRemote()
   {
-    return this.http.get(this.baseUrl+"rejectLoan/"+ user_id);
+    return this.http.get(this.baseUrl+"rejectLoan/"+ this.shared_user_id);
   }
 }

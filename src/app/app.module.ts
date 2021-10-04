@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { MatRadioModule } from '@angular/material/radio';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UserloginComponent } from './userlogin/userlogin.component';
@@ -24,6 +24,11 @@ import { ViewDetailsComponent } from './view-details/view-details.component';
 import { VehicleComponent } from './vehicle/vehicle.component';
 import { UseraccdetailsComponent } from './useraccdetails/useraccdetails.component';
 import { CheckEligibilityComponent } from './check-eligibility/check-eligibility.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormPg2Component } from './form-pg2/form-pg2.component';
+import { FormPg3Component } from './form-pg3/form-pg3.component';
+import {ReactiveFormsModule} from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -46,6 +51,8 @@ import { CheckEligibilityComponent } from './check-eligibility/check-eligibility
     VehicleComponent,
     UseraccdetailsComponent,
     CheckEligibilityComponent,
+    FormPg2Component,
+    FormPg3Component
     
   ],
   imports: [
@@ -53,7 +60,10 @@ import { CheckEligibilityComponent } from './check-eligibility/check-eligibility
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    Ng5SliderModule
+    Ng5SliderModule,
+    BrowserAnimationsModule,
+    MatRadioModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

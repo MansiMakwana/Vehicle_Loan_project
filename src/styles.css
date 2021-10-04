@@ -1,1 +1,19 @@
-/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+ */
+ *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box
+  }
+  body {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    font-family:sans-serif;
+    background:#FAF2EA;
+    background-image: linear-gradient(to bottom right, rgb(228, 210, 189), rgb(180, 130, 65));
+  }

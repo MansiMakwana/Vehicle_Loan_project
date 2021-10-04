@@ -19,13 +19,12 @@ export class VehicleComponent implements OnInit {
   vehicle=new Vehicledetails();
 
   vehicleDetails(vehicleDetailsForm:any){
-    this.service=vehicleDetailsForm.value
+
+    this.vehicle=vehicleDetailsForm.value
     
     this.service.vehicleDetailsFromRemote(this.vehicle).subscribe(
       (data)=>{
-        console.log(data);
-        this.flag=true;
-        
+        console.log(data);              
         this.router.navigate(["/useraccdetails"]);
         
       },

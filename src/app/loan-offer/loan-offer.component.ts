@@ -18,6 +18,7 @@ export class LoanOfferComponent implements OnInit {
   flag:boolean=false;
   dis:boolean=false;
   tempID:number=0;
+  disable:boolean=true;
   loan:any;
 
   applyForLoan(loanDetailsForm:any)

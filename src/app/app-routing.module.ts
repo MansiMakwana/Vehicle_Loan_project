@@ -6,6 +6,8 @@ import { ApplyLoanComponent } from './apply-loan/apply-loan.component';
 import { AproovedLoansComponent } from './aprooved-loans/aprooved-loans.component';
 import { EMICalcComponent } from './emicalc/emicalc.component';
 import { FormPg1Component } from './form-pg1/form-pg1.component';
+import { FormPg2Component } from './form-pg2/form-pg2.component';
+import { FormPg3Component } from './form-pg3/form-pg3.component';
 import { HomeComponent } from './home/home.component';
 import { HomeafterloginComponent } from './homeafterlogin/homeafterlogin.component';
 import { LoanOfferComponent } from './loan-offer/loan-offer.component';
@@ -35,6 +37,8 @@ const routes: Routes =
 {path:'user-dashboard',component:UserDashboardComponent},
 {path:'emicalc',component:EMICalcComponent},
 {path:'form-pg1',component:FormPg1Component},
+{path:'form-pg2',component:FormPg2Component},
+{path:'form-pg3',component:FormPg3Component},
 {path:'apply-loan',component:ApplyLoanComponent},
 {path:'loan-offer',component:LoanOfferComponent},
 {path:'aprooved-loans',component:AproovedLoansComponent},

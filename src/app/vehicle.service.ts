@@ -11,8 +11,9 @@ export class VehicleService {
 
   constructor(private http:HttpClient) { }
   baseUrl="http://localhost:8089/";
-
+  uID:number=JSON.parse(sessionStorage.getItem('token')  || '{}');
   public vehicleDetailsFromRemote(vehicle: Vehicledetails){
-    return this.http.post(this.baseUrl+"saveVehicle",vehicle);
+  return this.http.post(this.baseUrl+"saveVehicle/"+this.uID,vehicle);
+
 }
 }

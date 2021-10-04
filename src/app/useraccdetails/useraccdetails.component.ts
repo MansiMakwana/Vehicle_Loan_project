@@ -12,17 +12,18 @@ export class UseraccdetailsComponent implements OnInit {
   constructor(private service:UseraccdetailsService, private router:Router) { }
 
   accdetails:any;
+  isELigible:boolean=true;
   useraccdetails(UserAccountDetailsForm:any)
   {
     this.service.getAll(UserAccountDetailsForm.value).subscribe(
       (data)=>{
         console.log(data);
         this.accdetails=data;
-
-       
-        // if(data.accNo){
-        //   this.router.navigate(["/homeafterlogin"])
-        // }
+        if(this.accdetails.existingEMI==false && this.accdetails.monthlySalary>=25000){
+          this.router.navigate(["/loan-offer"]);
+        } else {
+          this.isELigible = false;
+        }
       }
     )
   }

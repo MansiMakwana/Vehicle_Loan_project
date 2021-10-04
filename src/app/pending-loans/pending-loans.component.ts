@@ -26,6 +26,8 @@ export class PendingLoansComponent implements OnInit {
       console.log(error);
   }
     )
+
+    
   }
 
   gotoViewDetails(user_id:any)
@@ -38,11 +40,13 @@ export class PendingLoansComponent implements OnInit {
 
   aprooveLoan(user_id:any)
   {
-    this.service.aprooveLoanRemote(user_id).subscribe(
+    this.service.setId(user_id);
+    this.service.aprooveLoanRemote().subscribe(
       (data)=> 
       {
         console.log(data);
         alert("Status Updated");
+        location.reload();
       },
       (error)=>
       {
@@ -56,12 +60,14 @@ export class PendingLoansComponent implements OnInit {
 
   RejectLoan(user_id:any)
   {
+    this.service.setId(user_id);
 
-    this.service.aprooveLoanRemote(user_id).subscribe(
+    this.service.RejectLoanRemote().subscribe(
       (data)=> 
       {
         console.log(data);
         alert("Status Updated");
+        location.reload();
       },
       (error)=>
       {
