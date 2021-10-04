@@ -15,6 +15,15 @@ import { HomeComponent } from './home/home.component';
 import { ApplyLoanComponent } from './apply-loan/apply-loan.component';
 import { EMICalcComponent } from './emicalc/emicalc.component';
 import { Ng5SliderModule } from 'ng5-slider';
+import { LoanOfferComponent } from './loan-offer/loan-offer.component';
+import { FormPg1Component } from './form-pg1/form-pg1.component';
+import { AproovedLoansComponent } from './aprooved-loans/aprooved-loans.component';
+import { PendingLoansComponent } from './pending-loans/pending-loans.component';
+import { RejectedLoansComponent } from './rejected-loans/rejected-loans.component';
+import { ViewDetailsComponent } from './view-details/view-details.component';
+import { VehicleComponent } from './vehicle/vehicle.component';
+import { UseraccdetailsComponent } from './useraccdetails/useraccdetails.component';
+import { CheckEligibilityComponent } from './check-eligibility/check-eligibility.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +37,15 @@ import { Ng5SliderModule } from 'ng5-slider';
     HomeComponent,
     ApplyLoanComponent,
     EMICalcComponent,
+    LoanOfferComponent,
+    FormPg1Component,
+    AproovedLoansComponent,
+    PendingLoansComponent,
+    RejectedLoansComponent,
+    ViewDetailsComponent,
+    VehicleComponent,
+    UseraccdetailsComponent,
+    CheckEligibilityComponent,
     
   ],
   imports: [

@@ -5,15 +5,34 @@
 <div style="margin-left: 40%;">
 
     <br><br>
+    <h2>Loan Details</h2>
+
+    <table>
+        <tr><td>Loan ID</td><td>{{this.loan.loanId}}</td></tr>
+        <tr><td>Loan Amount</td><td>{{this.loan.loanAmount}}</td></tr>
+        <tr><td>Interest Rate</td><td>{{this.loan.interestRate}}</td></tr>
+        <tr><td>Loan tenure</td><td>{{this.loan.tenure}} months</td></tr>
+        <tr><td>EMI</td><td>{{this.loan.emi}}</td></tr>
+        <tr><td>Status</td><td>{{this.loan.applicationStatus}}</td></tr>
+        <tr><td>Loan type</td><td>{{this.loan.loantype}}</td></tr>
+        <tr><td>Loan Start Date</td><td>{{this.loan.loanStartDate}}</td></tr>
+        <tr><td>Loan End Date</td><td>{{this.loan.loanEndDate}}</td></tr>
+        <tr><td>Processing fees</td><td>{{this.loan.processingFee}}</td></tr>
+        
+    </table>
     
     
+
+ <!--   
     <button>Loan Amount</button>
     
     <br><br>
+
+    
     
     <button>EMI Schedule</button>
  
-    
+ -->   
     <br><br>
     
     <button (click)="gotoHome()">Logout</button>

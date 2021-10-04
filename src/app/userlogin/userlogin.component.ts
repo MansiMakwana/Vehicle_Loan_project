@@ -9,13 +9,16 @@ import { Userlogin } from '../userlogin';
   styleUrls: ['./userlogin.component.css']
 })
 export class UserloginComponent implements OnInit {
+ 
 
   constructor(private service:UserLoginService, private router:Router)  { }
 
   ngOnInit(): void {
   }
-  user=new Userlogin();
-
+  //user=new Userlogin();
+  user:any;
+  uID:number=JSON.parse(sessionStorage.getItem('token')  || '{}');
+  isLogin = "false";
   loginuser(userLoginForm:any)
   {
     this.user=userLoginForm.value;
@@ -24,12 +27,23 @@ export class UserloginComponent implements OnInit {
 
       (data)=>{
         console.log(data);
+        this.user=data;
+
+        
+        sessionStorage.setItem('token', JSON.stringify(this.user.userId));
+        
+
+        this.isLogin = "true";
+        sessionStorage.setItem("isLogin", this.isLogin);
+        
+
         this.router.navigate(["/homeafterlogin"])
         // if(data)
         //   alert("Vehicle Added!");
       },
       (error)=>{
           console.log(error);
+          sessionStorage.setItem("isLogin", this.isLogin);
           alert("Invalid EmailId or password!");
       }
 

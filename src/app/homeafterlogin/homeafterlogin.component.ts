@@ -13,6 +13,10 @@ export class HomeafterloginComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  gotoEMICalc()
+  {
+    this.router.navigate(["/emicalc"]);
+  }
 
   gotoUserDashboard()
   {
@@ -21,7 +25,21 @@ export class HomeafterloginComponent implements OnInit {
 
   gotoHome()
   {
+    sessionStorage.removeItem('token');
+    sessionStorage.removeItem('isLogin');
     this.router.navigate(["/home"])
+  }
+
+
+  // gotoUserAccDetails()
+  // {
+
+  //   this.router.navigate(["/useraccdetails"]);
+  // }
+
+  gotoVehicle()
+  {
+    this.router.navigate(["/vehicle"])
   }
 
 }

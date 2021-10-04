@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AdminControlsService } from '../admin-controls.service';
+import { AdminLoginService } from '../admin-login.service';
 
 @Component({
   selector: 'app-admin-dashboard',
@@ -8,9 +10,31 @@ import { Router } from '@angular/router';
 })
 export class AdminDashboardComponent implements OnInit {
 
-  constructor(private router:Router) { }
+  constructor(private router:Router,private service:AdminControlsService) { }
 
   ngOnInit(): void {
+  }
+
+  AproovedLoanArray:any;
+  PendingLoanArray:any;
+  RejectedLoanArray:any;
+
+  getApprovedLoans()
+  {
+    this.router.navigate(["/aprooved-loans"]); 
+
+  }
+
+
+  getPendingLoans()
+  {
+    this.router.navigate(["/pending-loans"])
+  }
+
+
+  getRejectedLoans()
+  {
+    this.router.navigate(["/rejected-loans"])
   }
 
   gotoHome()

@@ -1,0 +1,21 @@
+<p>aprooved-loans works!</p>
+
+
+<table>
+    <thead>
+        <th>User ID</th>
+        <th>Loan ID</th>
+        <th>Details</th> 
+        <th>Status</th>
+    </thead>  
+
+    <tbody>
+        <tr *ngFor="let l of AproovedLoanArray">
+                <td>{{l.userLogin.userId}}</td>
+                <td>{{l.loanId}} </td>
+              <td><button (click)="gotoViewDetails(l.userLogin.userId)" [(ngModel)]="l.userLogin.userId"> View Details</button></td>
+              <td>{{ l.applicationStatus}}</td>
+               
+        </tr>
+</tbody>
+</table>
