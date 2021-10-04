@@ -1,5 +1,6 @@
 package com.vehicle.pojo;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 import javax.persistence.CascadeType;
@@ -38,17 +39,17 @@ public class Loan
 
 	
 	@Column(name="LOAN_END_DATE")
-	private Date loanEndDate;
+	private LocalDate loanEndDate;
 
 	
 	@Column(name="LOAN_START_DATE")
-	private Date loanStartDate;
+	private LocalDate loanStartDate;
 
 	@Column(name="LOAN_STATUS", length=30)
 	private String loanStatus;
 
 	@Column(name="PROCESSING_FEE")
-	private float processingFee;
+	private float processingFee=500;
 	
 	@Column(name="TENURE")
 	private float tenure;
@@ -124,25 +125,25 @@ public void setLoanAmount(float loanAmount) {
 
 
 
-public Date getLoanEndDate() {
+public LocalDate getLoanEndDate() {
 	return loanEndDate;
 }
 
 
 
-public void setLoanEndDate(Date loanEndDate) {
+public void setLoanEndDate(LocalDate loanEndDate) {
 	this.loanEndDate = loanEndDate;
 }
 
 
 
-public Date getLoanStartDate() {
+public LocalDate getLoanStartDate() {
 	return loanStartDate;
 }
 
 
 
-public void setLoanStartDate(Date loanStartDate) {
+public void setLoanStartDate(LocalDate loanStartDate) {
 	this.loanStartDate = loanStartDate;
 }
 
@@ -208,9 +209,9 @@ public void setUserLogin(UserLogin userLogin) {
 
 
 
-public Loan(long loanId, String applicationStatus, float emi, float interestRate, float loanAmount, Date loanEndDate,
-		Date loanStartDate, String loanStatus, float processingFee, float tenure, String loantype,
-		UserLogin userLogin) {
+public Loan(long loanId, String applicationStatus, float emi, float interestRate, float loanAmount,
+		LocalDate loanEndDate, LocalDate loanStartDate, String loanStatus, float processingFee, float tenure,
+		String loantype, UserLogin userLogin) {
 	super();
 	this.loanId = loanId;
 	this.applicationStatus = applicationStatus;
@@ -242,6 +243,9 @@ public String toString() {
 			+ loanStartDate + ", loanStatus=" + loanStatus + ", processingFee=" + processingFee + ", tenure=" + tenure
 			+ ", loantype=" + loantype + ", userLogin=" + userLogin + "]";
 }
+
+
+
 
 
 

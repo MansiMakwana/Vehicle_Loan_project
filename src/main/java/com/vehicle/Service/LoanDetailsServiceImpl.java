@@ -60,6 +60,11 @@ public class LoanDetailsServiceImpl implements LoanDetailsService{
 //		DateFormat inputFormatter = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss.SSS");
 //		Date date_ = inputFormatter.parse(date);
 //		loan.setLoanStartDate(date);
+		System.out.println("*******************************************************");
+		System.out.println(java.time.LocalDate.now());
+		System.out.println("*******************************************************");
+		loan.setLoanStartDate(java.time.LocalDate.now());
+		loan.setLoanEndDate(java.time.LocalDate.now().plusMonths((long) n));
 		loan.setEmi((float)Math.ceil(calculate(P,R,n)));
 		
 		UserLogin tempUser=uLRepo.findByUserId(userId);
