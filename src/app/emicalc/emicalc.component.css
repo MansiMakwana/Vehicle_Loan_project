@@ -36,3 +36,11 @@ h1{
     margin-top: 50px;
     margin-bottom: 50px;
 }
+
+.block{
+    border: 2px solid #000;
+    padding: 10px;
+}
+.emicalc{
+    padding: 20px;
+}

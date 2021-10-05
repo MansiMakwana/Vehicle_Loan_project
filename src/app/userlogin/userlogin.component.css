@@ -121,3 +121,14 @@ a{
       padding:0;
     }
   }
+
+  body {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    font-family:sans-serif;
+    background:#FAF2EA;
+    background-image: linear-gradient(to bottom right, rgb(214, 188, 188), rgb(170, 12, 12));
+  }
+  

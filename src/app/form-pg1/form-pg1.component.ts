@@ -27,7 +27,7 @@ user:any;
       (error)=>
       {
         console.log(error);
-        alert("Error Occured!");
+        
       }
 
     )

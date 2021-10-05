@@ -15,6 +15,6 @@ export class UseraccdetailsService {
 
   public getAccDetailsById()
   {
-    return this.http.get("localhost:8089/getAccDetailsById/"+this.uID);
+    return this.http.get("http://localhost:8089/getAccDetailsById/"+this.uID);
   }
 }

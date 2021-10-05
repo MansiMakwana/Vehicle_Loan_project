@@ -1,0 +1,15 @@
+.form_group {
+    width: 400px;
+    margin: 20px auto;
+    border: 1px solid #000;
+    padding: 20px;
+    
+}
+.form_align{
+    text-align: center;
+}
+
+.btn{
+    margin: 20px auto;
+    background-color: rgb(4, 5, 5)
+}

@@ -1,18 +1,18 @@
-<p>form-pg2 works!</p>
+<br><br><h1 class="form_align" style="font-weight: bold;">Application Form Preview</h1>
 
-<table>
-    <tr><td>A/C No.:</td><td>{{this.acc.accNo}}</td></tr>
+
+<div  class="col-8 columns form_group h6 ">
+    <h2 class="form_align" style="color: red; font-weight: bold;">Employement details</h2>
+<table class="col-4 columns table">
     
-    <tr><td>Bank Name:</td><td>{{this.acc.bankName}}</td></tr>
-    <tr><td>IFSC Code:</td><td>{{this.acc.accIFSC}}</td></tr>
-    <tr><td>Account Type:</td><td>{{this.acc.accType}}</td></tr>
-    <tr><td>User Employement Type:</td><td>{{this.acc.userEmpType}}</td></tr>
-    <tr><td>Monthly Salary:</td><td>{{this.acc.monthlySalary}}</td></tr>
-    <tr><td>Existing EMI:</td><td>{{this.acc.existingEMI}}</td></tr>
-  
-</table>
-
-
-
-
-<button (click)="gotoFormPg3()">Next</button>
+    <tr><td>A/C No.:</td><td>{{this.acc.accNo}}</td></tr> <br>
+    <tr><td>Bank Name:</td><td>{{this.acc.bankName}}</td></tr><br>
+    <tr><td>IFSC Code:</td><td>{{this.acc.accIFSC}}</td></tr><br>
+    <tr><td>Account Type:</td><td>{{this.acc.accType}}</td></tr><br>
+    <tr><td>User Employement Type:</td><td>{{this.acc.userEmpType}}</td></tr><br>
+    <tr><td>Monthly Salary:</td><td>{{this.acc.monthlySalary}}</td></tr><br>
+    <tr><td>Existing EMI:</td><td>{{this.acc.existingEMI}}</td></tr><br>
+  </table>
+    
+  <button (click)="gotoFormPg3()" class="btn btn-dark">Next</button>
+</div>

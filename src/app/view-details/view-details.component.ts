@@ -24,7 +24,7 @@ export class ViewDetailsComponent implements OnInit {
       (error)=>
       {
         console.log(error);
-        alert("Error Occurred!!");
+        //alert("Error Occurred!!");
       }
 
     )

@@ -1,20 +1,22 @@
-<p>form-pg1 works!</p>
+<br><br><h1 class="form_align" style="font-weight: bold;">Application Form Preview</h1>
 
-All User details
-
-<table>
-    <tr><td>USER ID:</td><td>{{this.user.userId}}</td></tr>
-    <tr><td>Email ID:</td><td>{{this.user.userEmailId}}</td></tr>
-    <tr><td>First Name:</td><td>{{this.user.userFirstName}}</td></tr>
-    <tr><td>Last Name:</td><td>{{this.user.userLastName}}</td></tr>
-    <tr><td>Address:</td><td>{{this.user.userAddress}}</td></tr>
-    <tr><td>City:</td><td>{{this.user.city}}</td></tr>
-    <tr><td>State:</td><td>{{this.user.state}}</td></tr>
-    <tr><td>Pincode:</td><td>{{this.user.pincode}}</td></tr>
-    <tr><td>Age:</td><td>{{this.user.userAge}}</td></tr>
+<div  class="col-8 columns form_group h6">
+    <h2 class="form_align" style="color: red; font-weight: bold;">Personal Details</h2>
+    <table class="col-4 columns table">
+    
+    <tr>
+        <td>USER ID:</td>
+        <td>{{this.user.userId}}</td>
+    </tr><br>
+    <tr><td>Email ID:</td><td>{{this.user.userEmailId}}</td></tr><br>
+    <tr><td>First Name:</td><td>{{this.user.userFirstName}}</td></tr><br>
+    <tr><td>Last Name:</td><td>{{this.user.userLastName}}</td></tr><br>
+    <tr><td>Address:</td><td>{{this.user.userAddress}}</td></tr><br>
+    <tr><td>City:</td><td>{{this.user.city}}</td></tr><br>
+    <tr><td>State:</td><td>{{this.user.state}}</td></tr><br>
+    <tr><td>Pincode:</td><td>{{this.user.pincode}}</td></tr><br>
+    <tr><td>Age:</td><td>{{this.user.userAge}}</td></tr><br>
     <tr><td>Gender:</td><td>{{this.user.userGender}}</td></tr>
-</table>
-
-<app-form-pg2></app-form-pg2>
-<button (click)="gotopg2()">Next</button>
-
+    </table>
+    <button (click)="gotopg2()" style="text-align: right;" class="btn btn-dark ">Next</button>
+</div>
